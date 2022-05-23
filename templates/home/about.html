@@ -1,0 +1,30 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% block title %}about{% endblock title %}
+
+{% block about %}
+
+    <!--about content-->
+    <div id="about-content">
+        <div class="about-header">
+            About <span class="color">Me</span>
+            <span class ="header-caption">Get to Know <span class="color"> me.</span></span>
+        </div>
+        <div class="about-main">
+    <div class="about-first-paragraph wow">
+    <!--about description-->
+       <span class="about-first-line">
+            I'm creative
+            <span class="color">web developer</span>
+             based in Kyiv, Ukraine </span>
+             <br>
+       <span class="about-second-line"> I have little experience in development but have a desire to develop in the company and engage in teamwork with professionals. </span>
+       <div class="cv">
+        <a href="{% static 'Python Web Developer Vostrilkov.pdf' %}"><button>Download <span class="colors">CV</span></button></a>
+    </div>
+    </div>
+    </div>
+
+    </div>
+
+{% endblock about %}

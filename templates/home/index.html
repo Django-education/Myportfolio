@@ -1,0 +1,36 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% block title %}Home{% endblock title %}
+
+{% block content %}
+<div id="header">
+    <div id="particles"></div>
+      <!--Social Media Links-->
+    <div class="social-media-links">
+       <a href="https://t.me/Grine1"><img src="{% static 'images/telegram logo.png' %}" class="social-media" alt="telegram-logo"></a><!--Your instagram homepage link inser in place of "#"-->
+        <a href="https://www.linkedin.com/in/oleh-vostrilkov-20439a219/"><img src="{% static 'images/linkedin logo.png' %}" class="social-media" alt="linkedin-logo"></a>
+        <a href="https://github.com/Django-education"><img src="{% static 'images/github logo.png' %}" class="social-media" alt="github-logo"></a>
+
+    </div>
+    <!--Social Media Links end-->
+    <div class="header-content">
+        <div class="header-content-box">
+        <div class="firstline"><span class="color">Oleh </span>Vostrilkov</div>
+        <div class="secondline">
+        I'm a
+    <span class="txt-rotate color" data-period="1200"data-rotate='[ " Designer.", " Freelancer." ]'></span>
+    <span class="slash">|</span>
+</div>
+            <div class="contact">
+        <a href="Mailto:grine1108@gmail.com"><img src="{% static 'images/mail.png' %}" alt="email-pic" class="contactpic"></a><!--Your email Id write in place of "#"-->
+        <a href="Tel:+380971735788"><img src="{% static 'images/call.png' %}" alt="phone-pic" class="contactpic"></a><!--Your telephone number Id write in place of "#"-->
+            </div>
+    </div>
+    </div>
+    <!--header image-->
+    <div class="header-image">
+    <img src="{% static 'images/man.jpg' %}" alt="logo">
+    </div>
+    <!--header image end-->
+</div>
+{% endblock content %}

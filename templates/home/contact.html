@@ -1,0 +1,69 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% block title %}contact{% endblock title %}
+
+{% block contact %}
+
+     <div class="contact-header">Contact <span class="color"> Me</span>
+    <div class="contact-header-caption"> <span class="color"> Get</span> In Touch.</div></div>
+    <div class="contact-content">
+        <!--Contact form-->
+         <div class="contact-form">
+                 <div class="form-header" align="center">
+                     Message Me
+                 </div>
+                 <form id="myForm" action="{% url 'contact' %}" method="post">
+                    {% csrf_token %}
+                    <div class="input-line">
+                        <input  id="name" name="name" type="text" placeholder="Name" class="input-name">
+                        <input id="email" name="email" type="email" placeholder="Email"  class="input-name">
+                    </div>
+                        <input name="subject" type="text" id="subject" placeholder="subject" class="input-subject">
+                        <textarea id ="message" name="message" class="input-textarea" placeholder="message"></textarea>
+                    <button type="submit" id ="submit" value="send">Submit</button>
+                 </form>
+
+             </div>
+        <!--Contact form-->
+        <!--Contact information-->
+         <div class="contact-info">
+            <div class="contact-info-header">
+                Contact Info
+            </div>
+            <div class="contact-info-content">
+            <div class="contect-info-content-line">
+                <img src="{% static 'images/icon-name.png' %}" class="icon" alt="name-icon">
+                <div class="contact-info-icon-text">
+                    <h6>Name</h6>
+                    <p>Oleh Vostrilkov</p>
+              </div>
+            </div>
+            <div class="contect-info-content-line">
+              <img src="{% static 'images/icon-location.png' %}" class="icon" alt="location-icon">
+              <div class="contact-info-icon-text">
+                  <h6>Location</h6>
+                  <p>Kyiv, Ukraine</p>
+            </div>
+          </div>
+          <div class="contect-info-content-line">
+              <img src="{% static 'images/icon-phone.png' %}" class="icon" alt="phone-icon">
+              <div class="contact-info-icon-text">
+                  <h6>Call</h6>
+                  <p>+380971735788</p>
+            </div>
+          </div>
+
+          <div class="contect-info-content-line">
+              <img src="{% static 'images/icon-email.png' %}" class="icon" alt="email-icon">
+              <div class="contact-info-icon-text">
+                  <h6>Email</h6>
+                  <p>Grine1108@gmail.com</p>
+            </div>
+          </div>
+            </div>
+        <!--Contact information end-->
+       </div>
+    </div>
+
+
+{% endblock contact %}
